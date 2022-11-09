@@ -17,7 +17,7 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         // variables
         int keyDigits;
-        BinarySearchTree tree;
+        BinarySearchTree tree = new BinarySearchTree();
         String fileInput;
         File file= new File("pokemon.txt");
         Scanner scan = new Scanner(file);
@@ -25,7 +25,6 @@ public class Main {
         // read input from the file
         fileInput = scan.nextLine();                                // first scan will hold number of digits in the key
         keyDigits = Integer.valueOf(fileInput);
-        tree = new BinarySearchTree(parseKeyVal(scan.nextLine())); // first entry will be used to instantiate the tree/root
 
         while(scan.hasNext()){                                      // Scan each line
             fileInput = scan.nextLine();
@@ -34,7 +33,6 @@ public class Main {
                 tree.add(parseKeyVal(fileInput));
             }
         }
-
         // print the tree
         tree.print();
 

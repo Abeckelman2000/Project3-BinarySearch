@@ -3,8 +3,8 @@ public class BinarySearchTree {
 
     // functions
 
-    BinarySearchTree(Entry entry){
-        root = new Node(entry);
+    BinarySearchTree(){
+        root = null;
     }
 
     String about(){
@@ -16,6 +16,9 @@ public class BinarySearchTree {
     }
 
     void add(Entry entry){
+        if(root == null){
+            root = new Node(entry);
+        }
         root.add(entry);
     }
 

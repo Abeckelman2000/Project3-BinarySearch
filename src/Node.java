@@ -23,8 +23,12 @@ public class Node {
         System.out.print(this.value.key + ": " + this.value.value + "\n");
 
         // print children
-        left.print(indent + 1);
-        right.print(indent + 1);
+        if(left != null){
+            left.print(indent + 1);
+        }
+        if(right != null){
+            right.print(indent + 1);
+        }
     }
 
     void add(Entry entry){
